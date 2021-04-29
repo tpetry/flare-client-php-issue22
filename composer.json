@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "cweagans/composer-patches": "^1.7",
+        "facade/ignition": "^2.8",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -46,6 +48,11 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "patches": {
+            "facade/flare-client-php": {
+                "Stop at http request": "flare-http-client-patch.patch"
+            }
         }
     },
     "config": {

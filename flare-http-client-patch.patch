@@ -1,0 +1,24 @@
+From c7658fb837f6e43f03fb00ea748707b374514b58 Mon Sep 17 00:00:00 2001
+From: tpetry <tp@webstrategy.de>
+Date: Thu, 29 Apr 2021 12:24:54 +0200
+Subject: [PATCH] .2
+
+---
+ vendor/facade/flare-client-php/src/Http/Client.php | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git vendor/facade/flare-client-php/src/Http/Client.php vendor/facade/flare-client-php/src/Http/Client.php
+index 2b6705e..fcdb308 100644
+--- src/Http/Client.php
++++ src/Http/Client.php
+@@ -108,6 +108,7 @@ class Client
+      */
+     private function makeRequest(string $httpVerb, string $url, array $arguments = [])
+     {
++        dd('makeRequest', func_get_args());
+         $queryString = http_build_query([
+             'key' => $this->apiToken,
+             'secret' => $this->apiSecret,
+--
+2.31.1
+
